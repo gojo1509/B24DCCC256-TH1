@@ -36,6 +36,16 @@
 		component: './RandomUser',
 		icon: 'ArrowsAltOutlined',
 	},
+	{
+		path: '/guess-number',
+		name: 'Đoán Số',
+		component: './GuessNumber',
+	},
+	{
+		path: '/todo-list',
+		name: 'Todo List',
+		component: './ToDoList',
+	},
 
 	// DANH MUC HE THONG
 	// {

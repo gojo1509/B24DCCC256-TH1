@@ -71,7 +71,7 @@ const FormThongBao = (props: any) => {
 					email365: item.email365,
 				}));
 				if (!values.userList?.length) {
-					message.warn('Vui lòng chọn người nhận');
+					message.warning('Vui lòng chọn người nhận');
 					return;
 				}
 			}
@@ -84,7 +84,7 @@ const FormThongBao = (props: any) => {
 			if (edit) {
 				putModel(record?._id ?? '', values, getData)
 					.then()
-					.catch((er) => console.log(er));
+					.catch((er: any) => console.log(er));
 			} else {
 				await postModel(values, () => {
 					getData();
@@ -93,7 +93,7 @@ const FormThongBao = (props: any) => {
 						setDanhSachNhanSu([]);
 						setDanhSachSinhVien([]);
 					})
-					.catch((er) => console.log(er));
+					.catch((er: any) => console.log(er));
 			}
 		} catch (er) {
 			console.log(er);
