@@ -1,4 +1,6 @@
-﻿export default [
+﻿import path from 'path';
+
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -42,9 +44,41 @@
 		component: './GuessNumber',
 	},
 	{
+		path: '/oan-tu-ti',
+		name: 'Oẳn Tù Tì',
+		component: './OanTuTi',
+	},
+	{
 		path: '/todo-list',
 		name: 'Todo List',
 		component: './ToDoList',
+	},
+	{
+		path: '/ngan-hang-cau-hoi',
+		name: 'Ngân Hàng Câu Hỏi',
+		icon: 'BookOutlined',
+		routes: [
+			{
+				path: '/ngan-hang-cau-hoi',
+				component: './NganHangCauHoi/index',
+				hideInMenu: true, // ẩn trang cha nếu chỉ làm trang giới thiệu
+			},
+			{
+				path: '/ngan-hang-cau-hoi/danh-sach',
+				name: 'Danh sách câu hỏi',
+				component: './NganHangCauHoi/DanhSach',
+			},
+			{
+				path: '/ngan-hang-cau-hoi/them',
+				name: 'Thêm câu hỏi',
+				component: './NganHangCauHoi/Them',
+			},
+			{
+				path: '/ngan-hang-cau-hoi/tao-de',
+				name: 'Tạo đề thi',
+				component: './NganHangCauHoi/TaoDe',
+			},
+		],
 	},
 
 	// DANH MUC HE THONG
